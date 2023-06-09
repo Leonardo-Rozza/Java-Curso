@@ -17,7 +17,7 @@ public class  UsoEmpleados {
         losEmpleados[0] = new Empleados("Antonio", 200, 2014, 10, 12);
         losEmpleados[1] = new Empleados("Marcos", 2000, 2014, 8, 23);
         losEmpleados[2] = new Empleados("Lucy", 3050, 2014, 3, 8);
-        losEmpleados[3] = new Empleados("Mimi", 7560, 2014, 11, 16);
+           losEmpleados[3] = new Empleados("Mimi", 7560, 2014, 11, 16);
         losEmpleados[4] = Ana; //Se puede realizar esta insercion gracias al Principio de Sustitucion, un jefe ES UN empleado.
 
         losEmpleados[5] = new Jefes("Isabel", 5000, 2019, 2, 10);
@@ -86,10 +86,4 @@ class Jefes extends Empleados{
     }
 
     private double incentivo;
-}
-
-class Director extends  Jefes {
-    public Director(String nombre, double sueldo, int agno, int mes, int dia) {
-        super(nombre, sueldo, agno, mes, dia);
-    }
 }
