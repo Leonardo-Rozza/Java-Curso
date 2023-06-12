@@ -31,7 +31,7 @@ class Empleados extends Personas{
     private Date fechaAlta;
 }
 
-class Jefes extends Empleados{
+class Jefes extends Empleados implements ParaJefes{
 
     public Jefes(String nombre, Date fechaAlta, double sueldo) {
         super(nombre, fechaAlta, sueldo);
@@ -41,7 +41,19 @@ class Jefes extends Empleados{
         this.incentivo = incentivo;
     }
 
+    @Override
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    @Override
+    public String getCargo() {
+        return "\n Ademas tiene el cargo de " +  cargo;
+    }
+
     private double incentivo;
+    private String cargo;
+
 }
 
 class Alumnos extends Personas{

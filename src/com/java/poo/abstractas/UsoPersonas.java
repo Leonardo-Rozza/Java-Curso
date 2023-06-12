@@ -16,5 +16,14 @@ public class UsoPersonas {
         Alumnos Leonardo = new Alumnos("Leonardo", "Programacion Web", "A720");
         System.out.println(Leonardo.getNombre());
         System.out.println(Leonardo.getDescripcion());
+
+        Jefes Pepe = new Jefes("Pepe" , new Date(32432432), 2444);
+        Pepe.setCargo("Supervisor");
+
+        System.out.println(Pepe.getDescripcion());
+        System.out.println(Pepe.getCargo());
+
+
+
     }
 }
