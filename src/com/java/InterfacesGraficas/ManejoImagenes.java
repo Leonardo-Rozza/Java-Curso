@@ -14,7 +14,7 @@ public class ManejoImagenes {
 
 class MarcoImagen extends JFrame {
     public MarcoImagen(){
-        setBounds(300, 300, 800, 450);
+        setBounds(300, 300, 2100, 1450);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         LaminaImagen lamina = new LaminaImagen();
         add(lamina);
@@ -26,12 +26,12 @@ class MarcoImagen extends JFrame {
 class LaminaImagen extends JPanel{
     public void paintComponent(Graphics g){
         super.paintComponent(g);
-        File miImagen = new File("src/InterfacesGraficas/corazon.jpg");
+        File miImagen = new File("src/InterfacesGraffias/corazon.jpg");
         try {
             imagen = ImageIO.read(miImagen);
         } catch (IOException e) {
             // throw new RuntimeException(e);
-            System.out.println("Lo siento la imagen no sea ha encontrado. ");
+            System.out.println("Lo siento la imagen no sea ha encontrado.");
         }
         g.drawImage(imagen, 100, 50, null);
     }
