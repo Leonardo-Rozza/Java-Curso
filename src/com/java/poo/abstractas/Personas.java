@@ -15,7 +15,7 @@ public abstract class Personas {
     private String nombre;
 }
 
-class Empleados extends Personas{
+class Empleados extends Personas implements Comparable{
     public Empleados (String nombre, Date fechaAlta, double sueldo){
         super(nombre);
         this.fechaAlta = fechaAlta;
@@ -29,6 +29,14 @@ class Empleados extends Personas{
 
     private double sueldo;
     private Date fechaAlta;
+
+    @Override
+    public int compareTo(Object o) {
+        Empleados otroEmpleado = (Empleados) o;
+        if (this.sueldo < otroEmpleado.sueldo) return -1;
+        if (this.sueldo > otroEmpleado.sueldo) return 1;
+        return 0;
+    }
 }
 
 class Jefes extends Empleados implements ParaJefes{
