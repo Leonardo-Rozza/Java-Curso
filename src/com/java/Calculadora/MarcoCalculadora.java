@@ -8,9 +8,8 @@ public class MarcoCalculadora extends JFrame {
         setBounds(450, 200, 450, 300);
         setTitle("Calculadora");
         //Agregamos la primer Lámina
-        add(new LaminaResultado(), BorderLayout.NORTH);
+        add(new LaminaResultado());
         //Agregamos la lámina de loa botones
-        add(new LaminaBotones(), BorderLayout.CENTER);
         setVisible(true);
     }
 }
