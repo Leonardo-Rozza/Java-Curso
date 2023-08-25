@@ -30,7 +30,7 @@ class MaroConLayout extends JFrame{
         //setLayout(new FlowLayout(FlowLayout.CENTER, 50, 100));
 
         add(lamina, BorderLayout.SOUTH);
-        add(lamina2, BorderLayout.NORTH);
+        add(lamina2, BorderLayout.CENTER);
     }
 
 }
@@ -48,7 +48,7 @@ class PanelConLayout extends JPanel{
 
 class PanelConLayout2 extends JPanel{
     PanelConLayout2(){
-        setLayout(new FlowLayout(FlowLayout.LEFT));
+        setLayout(new FlowLayout(FlowLayout.CENTER));
 
         add(new JButton("Verde"));
         add(new JButton("Morado"));
