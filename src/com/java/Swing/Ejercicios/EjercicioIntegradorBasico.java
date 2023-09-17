@@ -2,6 +2,7 @@ package com.java.Swing.Ejercicios;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class EjercicioIntegradorBasico {
     public static void main(String[] args) {
@@ -51,6 +52,11 @@ class LaminaEjercicio2 extends JPanel{
         radio2 = new JRadioButton("Radio 2");
         boton1 = new JButton("Boton 1");
         boton2 = new JButton("Boton 2");
+
+        casilla1.addActionListener(e -> {
+            textArea.setText(name.getText());
+            textArea.setText(lastName.getText());
+        });
 
         inferior.add(boton1, BorderLayout.EAST);
         inferior.add(boton2, BorderLayout.EAST);
