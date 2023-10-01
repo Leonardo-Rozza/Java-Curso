@@ -3,6 +3,7 @@ package com.java.Swing;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import java.awt.*;
 
 public class Spinner {
     public static void main(String[] args) {
@@ -22,7 +23,11 @@ class marcoJSpinner extends JFrame{
 
 class laminaJSpinner extends JPanel{
     laminaJSpinner(){
-        JSpinner control = new JSpinner();
+
+        String meses[] = {"Enero", "Febrero", "Marzo", "Abril"};
+        //JSpinner control = new JSpinner(new SpinnerListModel(meses));
+        JSpinner control = new JSpinner(new SpinnerNumberModel(5, 0, 20, 1));
+        control.setPreferredSize(new Dimension(120,30));
         control.addChangeListener(new ChangeListener() {
             @Override
             public void stateChanged(ChangeEvent e) {
