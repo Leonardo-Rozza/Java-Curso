@@ -29,10 +29,11 @@ class LaminaTextArea extends JPanel{
         botonArea.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Lo que escribiste fue \n" + textArea.getText());
+                textArea.setText(hola);
             }
         });
         add(panelArea);
         add(botonArea);
     }
+    private String hola = "Hola mundo!";
 }
